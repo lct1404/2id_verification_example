@@ -64,6 +64,7 @@ public class App
         VerifyCardResponse verifyCardResponse = verifyCardResponseBaseResponse.getData();
         System.out.println("Verify: " + verifyCardResponse.isResult()); // kết quả xác thực
         System.out.println("Timestamp: " + verifyCardResponse.getTimestamp()); // thời gian xác thực
+        System.out.println("Signature: " + verifyCardResponse.getSignature()); // chữ ký số của BCA
 
     }
 }

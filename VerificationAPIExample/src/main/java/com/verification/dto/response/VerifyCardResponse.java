@@ -10,4 +10,5 @@ import lombok.*;
 public class VerifyCardResponse {
     private boolean result;
     private long timestamp;
+    private String signature;
 }
