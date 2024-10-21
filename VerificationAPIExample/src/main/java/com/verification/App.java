@@ -9,42 +9,14 @@ import com.verification.service.VerificationService;
 
 import java.util.UUID;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )
     {
         String url = "https://uat-api-c06verify.2id.vn";
-        String username = "036085000021";
-        String password = "123456aA@";
-
-
+        String apiKey = "94b21204-7975-402f-8540-d33baeef4c3e";
+        String secretKey = "161e6cc5af2ee913b6885c17cd6e3231";
         VerificationService verificationService = new VerificationService(url);
-        // Login:
-        BaseResponse<LoginResponse> loginResponseBaseResponse = verificationService.login(username, password);
-        if (!loginResponseBaseResponse.isStatus()) {
-            System.out.println("Login failed!");
-            return;
-        }
-        LoginResponse loginResponse = loginResponseBaseResponse.getData();
-        System.out.println("accessToken: " + loginResponse.getAccessToken());
-        System.out.println("refreshToken: " + loginResponse.getRefreshToken());
-
-        // get secretKey: chỉ get 1 lần và sử dụng. Khi bị lộ có thể call API reset để lấy lại secretKey
-        BaseResponse<SecretKeyResponse> secretKeyResponseBaseResponse = verificationService.getSecretKey(loginResponse.getAccessToken());
-        if (!secretKeyResponseBaseResponse.isStatus()) {
-            System.out.println("Get SecretKey failed!");
-            return;
-        }
-        SecretKeyResponse secretKeyResponse = secretKeyResponseBaseResponse.getData();
-        System.out.println("secretKey: " + secretKeyResponse.getSecretKey());
-
-        // Verify card (không cần accessToken, auth qua secretKey)
-        String apiKey = secretKeyResponse.getKey();
-        String secretKey = secretKeyResponse.getSecretKey();
         String transactionId = UUID.randomUUID().toString();
         long timestamp = System.currentTimeMillis();
         VerifyCardRequest request = VerifyCardRequest.builder()
@@ -54,7 +26,6 @@ public class App
                 .dg14DataB64("boIBfjGCAXowDQYIBAB/AAcCAgICAQEwDwYKBAB/AAcCAgMCAgIBATASBgoEAH8ABwICBAICAgECAgENMIIBQgYJBAB/AAcCAgECMIIBMzCB7AYHKoZIzj0CATCB4AIBATAsBgcqhkjOPQEBAiEAqftX26Huqbw+ZgqQnYONcm479iPVJiAoIBNIHR9uU3cwRAQgfVoJdfwsMFfu9nUwQXr/5/uAVcEm3Fxs6UpLRPMwtdkEICbcXGzpSktE8zC12bvXfL+VhBYpXPfhzmvM3Bj/jAe2BEEEi9Kuuct+V8ssS0gv/IG3r7neJ+HjvSPCOkRTvZrOMmJUfvg1w9rE/Zf4RhoUYR3JwndFEy3tjlRcHVTHLwRplwIhAKn7V9uh7qm8PmYKkJ2DjXGMOXqjtWGm95AeDoKXSFanAgEBA0IABDSrVdzQ/fmse7+10cycVQIOvp2KIm1Gf4mM1UjfnTrkIb1cD+JVPhtf0afmjWgcPUDIEOoJmp0ahRMJAaYBa+k=")
                 .sodData("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")
                 .build();
-
         BaseResponse<VerifyCardResponse> verifyCardResponseBaseResponse = verificationService.verify(apiKey, secretKey, transactionId, timestamp, request);
         if (!verifyCardResponseBaseResponse.isStatus()) {
             System.out.println("Verify failed!");
@@ -62,9 +33,8 @@ public class App
             return;
         }
         VerifyCardResponse verifyCardResponse = verifyCardResponseBaseResponse.getData();
-        System.out.println("Verify: " + verifyCardResponse.isResult()); // kết quả xác thực
-        System.out.println("Timestamp: " + verifyCardResponse.getTimestamp()); // thời gian xác thực
+        System.out.println("Verify: " + verifyCardResponse.isResult()); // kết quả xác thực từ BCA
+        System.out.println("Timestamp: " + verifyCardResponse.getTimestamp()); // thời gian xác thực từ BCA
         System.out.println("Signature: " + verifyCardResponse.getSignature()); // chữ ký số của BCA
-
     }
 }
