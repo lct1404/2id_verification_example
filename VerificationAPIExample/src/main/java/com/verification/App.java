@@ -14,9 +14,9 @@ public class App
 {
     public static void main( String[] args )
     {
-        String url = "https://uat-api-c06verify.2id.vn";
-        String apiKey = "94b21204-7975-402f-8540-d33baeef4c3e";
-        String secretKey = "161e6cc5af2ee913b6885c17cd6e3231";
+        String url = "https://api-c06verify.2id.vn";
+        String apiKey = "1d37e913-b2ce-4249-b4df-703c5ac18309";
+        String secretKey = "2a573c48321381a7ae1f44cefbf69cda";
         VerificationService verificationService = new VerificationService(url);
         String transactionId = UUID.randomUUID().toString();
         long timestamp = System.currentTimeMillis();
@@ -37,8 +37,11 @@ public class App
             return;
         }
         VerifyCardResponse verifyCardResponse = verifyCardResponseBaseResponse.getData();
-        System.out.println("Verify: " + verifyCardResponse.isResult()); // kết quả xác thực từ BCA
-        System.out.println("Timestamp: " + verifyCardResponse.getTimestamp()); // thời gian xác thực từ BCA
+        System.out.println("Verify: " + verifyCardResponse.getResult()); // kết quả xác thực từ BCA
+        System.out.println("time: " + verifyCardResponse.getTime()); // thời gian xác thực từ BCA
         System.out.println("Signature: " + verifyCardResponse.getSignature()); // chữ ký số của BCA
+        System.out.println("exitcode: " + verifyCardResponse.getExitcode()); // Trạng thái yêu cầu xác thực
+        System.out.println("message: " + verifyCardResponse.getMessage()); // Thông báo yêu cầu xác thực
+        System.out.println("responseId: " + verifyCardResponse.getResponseId()); // Mã yêu cầu xác thực
     }
 }

@@ -8,7 +8,10 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 public class VerifyCardResponse {
-    private boolean result;
-    private long timestamp;
+    private Boolean result;
+    private Long time;
     private String signature;
+    private String responseId;
+    private String message;
+    private Integer exitcode;
 }
