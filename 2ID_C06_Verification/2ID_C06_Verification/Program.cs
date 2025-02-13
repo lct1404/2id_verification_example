@@ -19,9 +19,10 @@ namespace _2ID_C06_Verification
 
         static async Task Main(string[] args)
         {
-            string url = "https://uat-api-c06verify.2id.vn";
-            string apiKey = "ffb5c0c8-496b-42bd-a73e-02399f01b45d";
-            string secretKey = "9aa94d6173cce569911116e3e5de6756";
+            string url = "https://uat-apim.2id.vn/gateway/2id-check/v.1";
+            string merchantKey = "161a56f0-b057-4b51-bf03-5f50c4e85122";
+            string secretKey = "80100a554c360333ca428ef0d020c01a";
+            string apiKey = "eyJ4NXQjUzI1NiI6Ik5XUXdPVFJrTWpBNU9XRmpObVUyTnpCbE5UTTNaRFV3T0RVellqWXdabUpsWlROa1pEQTRPRFU0WlRVd1pHSXdObVV5TW1abVpUTmhaRGt5TmpRMlpBPT0iLCJraWQiOiJnYXRld2F5X2NlcnRpZmljYXRlX2FsaWFzIiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYifQ==.eyJzdWIiOiJhZG1pbkBjYXJib24uc3VwZXIiLCJhcHBsaWNhdGlvbiI6eyJpZCI6MywidXVpZCI6IjM2ODczODNhLTNmZTAtNGY5MC1hZGNmLTk3MzgzYTY3OTkxOCJ9LCJpc3MiOiJodHRwczpcL1wvdWF0LWFwaW0uMmlkLnZuOjQ0M1wvb2F1dGgyXC90b2tlbiIsImtleXR5cGUiOiJTQU5EQk9YIiwicGVybWl0dGVkUmVmZXJlciI6IiIsInRva2VuX3R5cGUiOiJhcGlLZXkiLCJwZXJtaXR0ZWRJUCI6IiIsImlhdCI6MTczOTQxMzUyNCwianRpIjoiMWM3N2QzZDEtNDgzNC00OTdkLTk2ZTgtNjVjMDhlMWNkNjMxIn0=.ac4_D1B_KxiO8WDkMqPi3kEqSIJ7ZJn4PojBCfrme-sTPiO2G5nN31KvDFBEGpvaCjG3h0fv7z40XSujMBkXIaDGXaSKEpkH_UjosRlwO8aNiDx_3yagqyxCfU4ZQNkFS4hm7KRdeWrIRl25y2j9cBGALu6hx6ykcQOiHmHsX3YIUo1L923rHDTO0aOjJ9QJamvePAS00EPww-OOJ4nkt0dgFERS5dnz6Kl2Z3B2QJ_rve0m_vli8mBXepHXz4d_nAwXmjlB6c4VQmUyEzp82JwwjM7luzO49uZrRjfno2Ux_wXCr1cobZw4gqQ5B2rzgp9Y8PPu7VfOZVOeMuczNA==";
 
             // build request data
             string trasnsactionId = Guid.NewGuid().ToString();
@@ -38,12 +39,14 @@ namespace _2ID_C06_Verification
             }
 
             VerificationRequest verificationRequest = JsonSerializer.Deserialize<VerificationRequest>(requestJson);
+
             verificationRequest.method = method;
 
-            string hashData = BuildHashRequest(apiKey, secretKey, trasnsactionId, timestamp, verificationRequest.dg1DataB64);
+            string hashData = BuildHashRequest(merchantKey, secretKey, trasnsactionId, timestamp, verificationRequest.dg1DataB64);
+            
 
             // call verify api
-            BaseReponse<VerificationResponse> response = await VerifyAsync(url, apiKey, trasnsactionId, timestamp, hashData, verificationRequest);
+            BaseReponse<VerificationResponse> response = await VerifyAsync(url, apiKey, merchantKey, trasnsactionId, timestamp, hashData, verificationRequest);
             if (response == null && !response.status)
             {
                 Console.WriteLine("Verify card failed");
@@ -62,6 +65,7 @@ namespace _2ID_C06_Verification
         static async Task<BaseReponse<VerificationResponse>> VerifyAsync(
             string url,
             string apiKey,
+            string merchantKey,
             string transactionId,
             long timestamp,
             string hash,
@@ -72,13 +76,13 @@ namespace _2ID_C06_Verification
                 // Thiết lập các tham số truy vấn
                 var queryParams = new Dictionary<string, string>
                     {
-                        {"apiKey", apiKey},
+                        {"merchantKey", merchantKey},
                         {"transactionId", transactionId},
                         {"timestamp", timestamp.ToString()},
                         {"hash", hash}
                     };
                 string query = HttpUtils.ConvertDictionaryToQueryString(queryParams);
-                string apiUrl = url + "/api/v1/c06-verify/integration/verify-card";
+                string apiUrl = url + "/c06-verify/integration/verify-card";
                 if (!string.IsNullOrEmpty(query))
                     apiUrl = apiUrl + "?" + query;
 
@@ -94,6 +98,7 @@ namespace _2ID_C06_Verification
                         "application/json"
                     )
                 };
+                request.Headers.Add( "ApiKey", apiKey);
 
                 // Gửi request
                 HttpResponseMessage response = await client.SendAsync(request);
@@ -110,11 +115,11 @@ namespace _2ID_C06_Verification
         }
 
 
-        static string BuildHashRequest(string apiKey, string secretKey, string transactionId, long timestamp, string message)
+        static string BuildHashRequest(string merchantKey, string secretKey, string transactionId, long timestamp, string message)
         {
             try
             {
-                string verifyHashPlainText = HashUtils.BuildHashValue(apiKey, transactionId, timestamp, message);
+                string verifyHashPlainText = HashUtils.BuildHashValue(merchantKey, transactionId, timestamp, message);
                 string hashData = HashUtils.HashSHA512(secretKey, verifyHashPlainText);
                 return HashUtils.FormatHex(hashData);
             }
