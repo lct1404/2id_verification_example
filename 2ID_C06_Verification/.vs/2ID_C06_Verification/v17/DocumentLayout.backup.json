@@ -3,44 +3,44 @@
   "WorkspaceRootPath": "D:\\code\\2id-example\\2ID_C06_Verification\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{13965606-9892-4FD8-9A5C-73CF6F594A5B}|2ID_C06_Verification\\2ID_C06_Verification.csproj|d:\\code\\2id-example\\2id_c06_verification\\2id_c06_verification\\utils\\hashutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{13965606-9892-4FD8-9A5C-73CF6F594A5B}|2ID_C06_Verification\\2ID_C06_Verification.csproj|solutionrelative:2id_c06_verification\\utils\\hashutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{13965606-9892-4FD8-9A5C-73CF6F594A5B}|2ID_C06_Verification\\2ID_C06_Verification.csproj|D:\\code\\2id-example\\2ID_C06_Verification\\2id_c06_verification\\models\\verificationmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{13965606-9892-4FD8-9A5C-73CF6F594A5B}|2ID_C06_Verification\\2ID_C06_Verification.csproj|solutionrelative:2id_c06_verification\\models\\verificationmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{13965606-9892-4FD8-9A5C-73CF6F594A5B}|2ID_C06_Verification\\2ID_C06_Verification.csproj|D:\\code\\2id-example\\2ID_C06_Verification\\2id_c06_verification\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{13965606-9892-4FD8-9A5C-73CF6F594A5B}|2ID_C06_Verification\\2ID_C06_Verification.csproj|solutionrelative:2id_c06_verification\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{13965606-9892-4FD8-9A5C-73CF6F594A5B}|2ID_C06_Verification\\2ID_C06_Verification.csproj|D:\\code\\2id-example\\2ID_C06_Verification\\2id_c06_verification\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{13965606-9892-4FD8-9A5C-73CF6F594A5B}|2ID_C06_Verification\\2ID_C06_Verification.csproj|solutionrelative:2id_c06_verification\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{13965606-9892-4FD8-9A5C-73CF6F594A5B}|2ID_C06_Verification\\2ID_C06_Verification.csproj|D:\\code\\2id-example\\2ID_C06_Verification\\2id_c06_verification\\models\\basereponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{13965606-9892-4FD8-9A5C-73CF6F594A5B}|2ID_C06_Verification\\2ID_C06_Verification.csproj|solutionrelative:2id_c06_verification\\models\\basereponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{13965606-9892-4FD8-9A5C-73CF6F594A5B}|2ID_C06_Verification\\2ID_C06_Verification.csproj|D:\\code\\2id-example\\2ID_C06_Verification\\2id_c06_verification\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{13965606-9892-4FD8-9A5C-73CF6F594A5B}|2ID_C06_Verification\\2ID_C06_Verification.csproj|d:\\code\\2id-example\\2id_c06_verification\\2id_c06_verification\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{13965606-9892-4FD8-9A5C-73CF6F594A5B}|2ID_C06_Verification\\2ID_C06_Verification.csproj|solutionrelative:2id_c06_verification\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{13965606-9892-4FD8-9A5C-73CF6F594A5B}|2ID_C06_Verification\\2ID_C06_Verification.csproj|D:\\code\\2id-example\\2ID_C06_Verification\\2id_c06_verification\\models\\verificationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{13965606-9892-4FD8-9A5C-73CF6F594A5B}|2ID_C06_Verification\\2ID_C06_Verification.csproj|solutionrelative:2id_c06_verification\\models\\verificationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{13965606-9892-4FD8-9A5C-73CF6F594A5B}|2ID_C06_Verification\\2ID_C06_Verification.csproj|D:\\code\\2id-example\\2ID_C06_Verification\\2id_c06_verification\\data\\verifyrequest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{13965606-9892-4FD8-9A5C-73CF6F594A5B}|2ID_C06_Verification\\2ID_C06_Verification.csproj|solutionrelative:2id_c06_verification\\data\\verifyrequest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{13965606-9892-4FD8-9A5C-73CF6F594A5B}|2ID_C06_Verification\\2ID_C06_Verification.csproj|D:\\code\\2id-example\\2ID_C06_Verification\\2id_c06_verification\\models\\verificationresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{13965606-9892-4FD8-9A5C-73CF6F594A5B}|2ID_C06_Verification\\2ID_C06_Verification.csproj|solutionrelative:2id_c06_verification\\models\\verificationresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{13965606-9892-4FD8-9A5C-73CF6F594A5B}|2ID_C06_Verification\\2ID_C06_Verification.csproj|D:\\code\\2id-example\\2ID_C06_Verification\\2id_c06_verification\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{13965606-9892-4FD8-9A5C-73CF6F594A5B}|2ID_C06_Verification\\2ID_C06_Verification.csproj|solutionrelative:2id_c06_verification\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13965606-9892-4FD8-9A5C-73CF6F594A5B}|2ID_C06_Verification\\2ID_C06_Verification.csproj|D:\\code\\2id-example\\2ID_C06_Verification\\2id_c06_verification\\utils\\hashutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13965606-9892-4FD8-9A5C-73CF6F594A5B}|2ID_C06_Verification\\2ID_C06_Verification.csproj|solutionrelative:2id_c06_verification\\utils\\hashutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{13965606-9892-4FD8-9A5C-73CF6F594A5B}|2ID_C06_Verification\\2ID_C06_Verification.csproj|D:\\code\\2id-example\\2ID_C06_Verification\\2id_c06_verification\\utils\\httputils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{13965606-9892-4FD8-9A5C-73CF6F594A5B}|2ID_C06_Verification\\2ID_C06_Verification.csproj|solutionrelative:2id_c06_verification\\utils\\httputils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13965606-9892-4FD8-9A5C-73CF6F594A5B}|2ID_C06_Verification\\2ID_C06_Verification.csproj|D:\\code\\2id-example\\2ID_C06_Verification\\2id_c06_verification\\data\\verifyrequest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{13965606-9892-4FD8-9A5C-73CF6F594A5B}|2ID_C06_Verification\\2ID_C06_Verification.csproj|solutionrelative:2id_c06_verification\\data\\verifyrequest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13965606-9892-4FD8-9A5C-73CF6F594A5B}|2ID_C06_Verification\\2ID_C06_Verification.csproj|D:\\code\\2id-example\\2ID_C06_Verification\\2id_c06_verification\\models\\basereponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13965606-9892-4FD8-9A5C-73CF6F594A5B}|2ID_C06_Verification\\2ID_C06_Verification.csproj|solutionrelative:2id_c06_verification\\models\\basereponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13965606-9892-4FD8-9A5C-73CF6F594A5B}|2ID_C06_Verification\\2ID_C06_Verification.csproj|D:\\code\\2id-example\\2ID_C06_Verification\\2id_c06_verification\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{13965606-9892-4FD8-9A5C-73CF6F594A5B}|2ID_C06_Verification\\2ID_C06_Verification.csproj|solutionrelative:2id_c06_verification\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13965606-9892-4FD8-9A5C-73CF6F594A5B}|2ID_C06_Verification\\2ID_C06_Verification.csproj|D:\\code\\2id-example\\2ID_C06_Verification\\2id_c06_verification\\models\\verificationmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13965606-9892-4FD8-9A5C-73CF6F594A5B}|2ID_C06_Verification\\2ID_C06_Verification.csproj|solutionrelative:2id_c06_verification\\models\\verificationmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{13965606-9892-4FD8-9A5C-73CF6F594A5B}|2ID_C06_Verification\\2ID_C06_Verification.csproj|D:\\code\\2id-example\\2ID_C06_Verification\\2id_c06_verification\\models\\verificationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{13965606-9892-4FD8-9A5C-73CF6F594A5B}|2ID_C06_Verification\\2ID_C06_Verification.csproj|solutionrelative:2id_c06_verification\\models\\verificationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,11 +50,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "BaseReponse.cs",
               "DocumentMoniker": "D:\\code\\2id-example\\2ID_C06_Verification\\2ID_C06_Verification\\models\\BaseReponse.cs",
               "RelativeDocumentMoniker": "2ID_C06_Verification\\models\\BaseReponse.cs",
@@ -67,7 +67,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "packages.config",
               "DocumentMoniker": "D:\\code\\2id-example\\2ID_C06_Verification\\2ID_C06_Verification\\packages.config",
               "RelativeDocumentMoniker": "2ID_C06_Verification\\packages.config",
@@ -91,20 +91,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "HashUtils.cs",
               "DocumentMoniker": "D:\\code\\2id-example\\2ID_C06_Verification\\2ID_C06_Verification\\utils\\HashUtils.cs",
               "RelativeDocumentMoniker": "2ID_C06_Verification\\utils\\HashUtils.cs",
               "ToolTip": "D:\\code\\2id-example\\2ID_C06_Verification\\2ID_C06_Verification\\utils\\HashUtils.cs",
               "RelativeToolTip": "2ID_C06_Verification\\utils\\HashUtils.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAuwCEAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T08:25:29.61Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-18T08:25:29.61Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "VerificationMethod.cs",
               "DocumentMoniker": "D:\\code\\2id-example\\2ID_C06_Verification\\2ID_C06_Verification\\models\\VerificationMethod.cs",
               "RelativeDocumentMoniker": "2ID_C06_Verification\\models\\VerificationMethod.cs",
@@ -116,19 +115,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\code\\2id-example\\2ID_C06_Verification\\2ID_C06_Verification\\Program.cs",
               "RelativeDocumentMoniker": "2ID_C06_Verification\\Program.cs",
               "ToolTip": "D:\\code\\2id-example\\2ID_C06_Verification\\2ID_C06_Verification\\Program.cs",
               "RelativeToolTip": "2ID_C06_Verification\\Program.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAQwBcAAABCAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T08:04:37.884Z"
+              "WhenOpened": "2024-12-18T08:04:37.884Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "verifyRequest.json",
               "DocumentMoniker": "D:\\code\\2id-example\\2ID_C06_Verification\\2ID_C06_Verification\\data\\verifyRequest.json",
               "RelativeDocumentMoniker": "2ID_C06_Verification\\data\\verifyRequest.json",
@@ -140,7 +140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 4,
               "Title": "HttpUtils.cs",
               "DocumentMoniker": "D:\\code\\2id-example\\2ID_C06_Verification\\2ID_C06_Verification\\utils\\HttpUtils.cs",
               "RelativeDocumentMoniker": "2ID_C06_Verification\\utils\\HttpUtils.cs",
@@ -152,7 +152,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "VerificationRequest.cs",
               "DocumentMoniker": "D:\\code\\2id-example\\2ID_C06_Verification\\2ID_C06_Verification\\models\\VerificationRequest.cs",
               "RelativeDocumentMoniker": "2ID_C06_Verification\\models\\VerificationRequest.cs",
@@ -164,7 +164,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "VerificationResponse.cs",
               "DocumentMoniker": "D:\\code\\2id-example\\2ID_C06_Verification\\2ID_C06_Verification\\models\\VerificationResponse.cs",
               "RelativeDocumentMoniker": "2ID_C06_Verification\\models\\VerificationResponse.cs",

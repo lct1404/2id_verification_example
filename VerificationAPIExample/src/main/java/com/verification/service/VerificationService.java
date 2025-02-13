@@ -19,20 +19,22 @@ import okhttp3.*;
 @AllArgsConstructor
 public class VerificationService {
     private String url;
-    public BaseResponse<VerifyCardResponse> verify(String apiKey, String secretKey, String transactionId, long timestamp, VerifyCardRequest verifyCardRequest) {
+    public BaseResponse<VerifyCardResponse> verify(String apiKey, String merchantKey, String secretKey, String transactionId,
+                                                   long timestamp, VerifyCardRequest verifyCardRequest) {
         try {
             OkHttpClient client = new OkHttpClient();
 
             // tạo hash để auth giữa client và server
-            String hash = VerificationUtils.buildRequestHash(apiKey, secretKey, transactionId, timestamp, verifyCardRequest.getDg1DataB64());
-            HttpUrl.Builder urlBuilder = HttpUrl.parse(url + "/api/v1/c06-verify/integration/verify-card").newBuilder();
-            urlBuilder.addQueryParameter("apiKey", apiKey);
+            String hash = VerificationUtils.buildRequestHash(merchantKey, secretKey, transactionId, timestamp, verifyCardRequest.getDg1DataB64());
+            HttpUrl.Builder urlBuilder = HttpUrl.parse(url + "/c06-verify/integration/verify-card").newBuilder();
+            urlBuilder.addQueryParameter("merchantKey", merchantKey);
             urlBuilder.addQueryParameter("transactionId", transactionId);
             urlBuilder.addQueryParameter("timestamp", String.valueOf(timestamp));
             urlBuilder.addQueryParameter("hash", hash);
             String bodyData = JsonUtils.toJson(verifyCardRequest);
             RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), bodyData);
             Request request = new Request.Builder()
+                    .addHeader("ApiKey", apiKey)
                     .url(urlBuilder.build())
                     .post(requestBody)
                     .build();
